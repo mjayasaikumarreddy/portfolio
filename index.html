@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>M Jaya Sai Kumar Reddy — AI/ML Engineer</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+  <!-- VSCode-style activity bar -->
+  <aside class="activity-bar" role="navigation" aria-label="Activity bar">
+    <div class="activity-bar__top">
+      <button class="activity-icon active" data-section="home" aria-label="Home">
+        <i class="fas fa-home"></i>
+      </button>
+      <button class="activity-icon" data-section="about" aria-label="About">
+        <i class="fas fa-user"></i>
+      </button>
+      <button class="activity-icon" data-section="skills" aria-label="Skills">
+        <i class="fas fa-code"></i>
+      </button>
+      <button class="activity-icon" data-section="experience" aria-label="Experience">
+        <i class="fas fa-briefcase"></i>
+      </button>
+      <button class="activity-icon" data-section="projects" aria-label="Projects">
+        <i class="fas fa-folder-open"></i>
+      </button>
+      <button class="activity-icon" data-section="contact" aria-label="Contact">
+        <i class="fas fa-envelope"></i>
+      </button>
+    </div>
+    <div class="activity-bar__bottom">
+      <a href="https://github.com/mjayasaikumarreddy" target="_blank" rel="noopener" class="activity-icon" aria-label="GitHub">
+        <i class="fab fa-github"></i>
+      </a>
+      <a href="https://linkedin.com" target="_blank" rel="noopener" class="activity-icon" aria-label="LinkedIn">
+        <i class="fab fa-linkedin"></i>
+      </a>
+    </div>
+  </aside>
+
+  <!-- Main editor area -->
+  <div class="editor-layout">
+    <!-- Tab bar -->
+    <div class="tab-bar" role="tablist" aria-label="Sections">
+      <div class="tab active" data-section="home" role="tab">
+        <i class="fas fa-home tab-icon"></i>
+        <span>home.tsx</span>
+        <button class="tab-close" aria-label="Close tab">×</button>
+      </div>
+      <div class="tab" data-section="about" role="tab">
+        <i class="fas fa-user tab-icon"></i>
+        <span>about.md</span>
+        <button class="tab-close" aria-label="Close tab">×</button>
+      </div>
+      <div class="tab" data-section="skills" role="tab">
+        <i class="fas fa-code tab-icon"></i>
+        <span>skills.json</span>
+        <button class="tab-close" aria-label="Close tab">×</button>
+      </div>
+      <div class="tab" data-section="experience" role="tab">
+        <i class="fas fa-briefcase tab-icon"></i>
+        <span>experience.ts</span>
+        <button class="tab-close" aria-label="Close tab">×</button>
+      </div>
+      <div class="tab" data-section="projects" role="tab">
+        <i class="fas fa-folder-open tab-icon"></i>
+        <span>projects.py</span>
+        <button class="tab-close" aria-label="Close tab">×</button>
+      </div>
+      <div class="tab" data-section="contact" role="tab">
+        <i class="fas fa-envelope tab-icon"></i>
+        <span>contact.go</span>
+        <button class="tab-close" aria-label="Close tab">×</button>
+      </div>
+    </div>
+
+    <!-- Breadcrumb -->
+    <div class="breadcrumb">
+      <span class="breadcrumb__item">portfolio</span>
+      <span class="breadcrumb__sep">›</span>
+      <span class="breadcrumb__item breadcrumb__active" id="breadcrumb-active">home.tsx</span>
+    </div>
+
+    <!-- Editor content -->
+    <main class="editor-content">
+
+      <!-- ===== HOME SECTION ===== -->
+      <section class="section active" id="home">
+        <div class="line-numbers" aria-hidden="true">
+          <span>1</span><span>2</span><span>3</span><span>4</span><span>5</span>
+          <span>6</span><span>7</span><span>8</span><span>9</span><span>10</span>
+        </div>
+        <div class="hero">
+          <div class="hero__code-comment">// hello world 👋</div>
+          <div class="hero__greeting">
+            <span class="code-keyword">const</span>
+            <span class="code-var"> developer</span>
+            <span class="code-op"> = </span>
+            <span class="code-string">"M Jaya Sai Kumar Reddy"</span>
+            <span class="code-op">;</span>
+          </div>
+          <h1 class="hero__name">M Jaya Sai Kumar Reddy</h1>
+          <div class="hero__roles">
+            <span class="code-keyword">function </span>
+            <span class="code-fn">introduce</span>
+            <span class="code-op">() {</span>
+            <br/>
+            <span class="code-indent">  </span>
+            <span class="code-keyword">return </span>
+            <span class="code-string">"</span>
+            <span id="typed-text" class="typed-text"></span>
+            <span class="code-string">"</span>
+            <span class="code-op">;</span>
+            <br/>
+            <span class="code-op">}</span>
+          </div>
+          <p class="hero__bio">
+            B.Tech CSE @ <span class="highlight">IIIT Kottayam</span> · 
+            Junior Research AI/ML · Building production-grade 
+            <span class="highlight">AI systems</span>, 
+            <span class="highlight">federated learning</span> frameworks &amp; 
+            <span class="highlight">deep learning</span> solutions.
+          </p>
+          <div class="hero__actions">
+            <button class="btn btn--primary" onclick="scrollToSection('projects')">
+              <i class="fas fa-folder-open"></i> View Projects
+            </button>
+            <button class="btn btn--ghost" onclick="scrollToSection('contact')">
+              <i class="fas fa-terminal"></i> Contact Me
+            </button>
+            <a href="mailto:m.jayasaikumarreddy@gmail.com" class="btn btn--outline">
+              <i class="fas fa-download"></i> Get Resume
+            </a>
+          </div>
+          <div class="hero__stats">
+            <div class="stat-card">
+              <span class="stat-number">3+</span>
+              <span class="stat-label">AI/ML Projects</span>
+            </div>
+            <div class="stat-card">
+              <span class="stat-number">78%+</span>
+              <span class="stat-label">FL Model Accuracy</span>
+            </div>
+            <div class="stat-card">
+              <span class="stat-number">90%</span>
+              <span class="stat-label">CNN Accuracy</span>
+            </div>
+            <div class="stat-card">
+              <span class="stat-number">10+</span>
+              <span class="stat-label">Aggregation Strategies</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+
+      <!-- ===== ABOUT SECTION ===== -->
+      <section class="section" id="about">
+        <div class="section-header">
+          <span class="code-comment">/** about.md — Who am I? */</span>
+        </div>
+        <h2 class="section-title">About Me</h2>
+
+        <div class="about-grid">
+
+          <!-- Education card -->
+          <div class="about-card reveal">
+            <div class="about-card__header">
+              <i class="fas fa-graduation-cap about-icon"></i>
+              <h3 class="about-card__heading">Education</h3>
+            </div>
+            <div class="edu-item">
+              <div class="edu-item__top">
+                <span class="edu-item__school">Indian Institute of Information Technology Kottayam</span>
+                <span class="edu-item__date">Apr 2023 – Apr 2027</span>
+              </div>
+              <div class="edu-item__degree">B.Tech — Computer Science &amp; Engineering</div>
+              <div class="edu-item__location"><i class="fas fa-map-marker-alt"></i> Kottayam, Kerala</div>
+            </div>
+            <div class="edu-divider"></div>
+            <div class="edu-item">
+              <div class="edu-item__top">
+                <span class="edu-item__school">Narayana Junior College</span>
+                <span class="edu-item__date">Jun 2021 – May 2023</span>
+              </div>
+              <div class="edu-item__degree">Board of Intermediate Education</div>
+              <div class="edu-item__location"><i class="fas fa-map-marker-alt"></i> Hyderabad, TS</div>
+            </div>
+          </div>
+
+          <!-- Bio + contact card -->
+          <div class="about-card reveal">
+            <div class="about-card__header">
+              <i class="fas fa-user-circle about-icon"></i>
+              <h3 class="about-card__heading">Profile</h3>
+            </div>
+            <p class="about-text">
+              I'm a 3rd-year Computer Science student at <strong>IIIT Kottayam</strong>,
+              passionate about AI/ML research and full-stack engineering. My work spans
+              deep learning, computer vision, explainable AI, and brain-computer interfaces —
+              building systems that are accurate, production-ready, and interpretable.
+            </p>
+            <p class="about-text">
+              Currently serving as <strong>PR &amp; Outreach Sub-Lead</strong> at BetaLab
+              Technical Club, organising AI/ML and software events on campus.
+            </p>
+            <div class="about-info-grid">
+              <div class="info-item">
+                <i class="fas fa-envelope"></i>
+                <span>m.jayasaikumarreddy@gmail.com</span>
+              </div>
+              <div class="info-item">
+                <i class="fas fa-phone"></i>
+                <span>+91 8333066657</span>
+              </div>
+              <div class="info-item">
+                <i class="fas fa-map-marker-alt"></i>
+                <span>Kottayam, Kerala, India</span>
+              </div>
+              <div class="info-item">
+                <i class="fab fa-github"></i>
+                <a href="https://github.com/mjayasaikumarreddy" target="_blank" rel="noopener">github.com/mjayasaikumarreddy</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Coursework card — full width -->
+          <div class="about-card about-card--wide reveal">
+            <div class="about-card__header">
+              <i class="fas fa-book-open about-icon"></i>
+              <h3 class="about-card__heading">Coursework</h3>
+            </div>
+            <div class="coursework-grid">
+              <span class="course-tag">Data Structures</span>
+              <span class="course-tag">Operating Systems</span>
+              <span class="course-tag">Machine Learning</span>
+              <span class="course-tag">Artificial Intelligence</span>
+              <span class="course-tag">Database Management</span>
+              <span class="course-tag">Data Visualization</span>
+              <span class="course-tag">Probability &amp; Statistics</span>
+              <span class="course-tag">Statistical Modeling</span>
+              <span class="course-tag">Optimization Methods</span>
+              <span class="course-tag">Business Analytics</span>
+              <span class="course-tag">Time-Series Analysis</span>
+              <span class="course-tag">EDA</span>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ===== SKILLS SECTION ===== -->
+      <section class="section" id="skills">
+        <div class="section-header">
+          <span class="code-comment">// skills.json — Technical Arsenal</span>
+        </div>
+        <h2 class="section-title">Technical Skills</h2>
+        <div class="skills-container">
+
+          <div class="skill-group">
+            <div class="skill-group__header">
+              <i class="fas fa-brain skill-group-icon ai"></i>
+              <span class="skill-group__title">AI &amp; Machine Learning</span>
+            </div>
+            <div class="skill-tags">
+              <span class="skill-tag ai">Generative AI</span>
+              <span class="skill-tag ai">RAG</span>
+              <span class="skill-tag ai">LLM Fine-Tuning</span>
+              <span class="skill-tag ai">LangChain</span>
+              <span class="skill-tag ai">Prompt Engineering</span>
+              <span class="skill-tag ai">Computer Vision</span>
+              <span class="skill-tag ai">Federated Learning</span>
+            </div>
+          </div>
+
+          <div class="skill-group">
+            <div class="skill-group__header">
+              <i class="fas fa-network-wired skill-group-icon dl"></i>
+              <span class="skill-group__title">Deep Learning</span>
+            </div>
+            <div class="skill-tags">
+              <span class="skill-tag dl">CNNs</span>
+              <span class="skill-tag dl">RNNs</span>
+              <span class="skill-tag dl">LSTM</span>
+              <span class="skill-tag dl">Transfer Learning</span>
+              <span class="skill-tag dl">Model Optimization</span>
+              <span class="skill-tag dl">Quantization</span>
+              <span class="skill-tag dl">Attention Mechanisms</span>
+            </div>
+          </div>
+
+          <div class="skill-group">
+            <div class="skill-group__header">
+              <i class="fas fa-code skill-group-icon lang"></i>
+              <span class="skill-group__title">Languages</span>
+            </div>
+            <div class="skill-tags">
+              <span class="skill-tag lang">Python</span>
+              <span class="skill-tag lang">SQL</span>
+              <span class="skill-tag lang">Kotlin</span>
+              <span class="skill-tag lang">Go</span>
+              <span class="skill-tag lang">Java</span>
+              <span class="skill-tag lang">Bash</span>
+              <span class="skill-tag lang">JavaScript</span>
+              <span class="skill-tag lang">TypeScript</span>
+            </div>
+          </div>
+
+          <div class="skill-group">
+            <div class="skill-group__header">
+              <i class="fas fa-layer-group skill-group-icon fw"></i>
+              <span class="skill-group__title">Frameworks &amp; Libraries</span>
+            </div>
+            <div class="skill-tags">
+              <span class="skill-tag fw">PyTorch</span>
+              <span class="skill-tag fw">TensorFlow</span>
+              <span class="skill-tag fw">Scikit-learn</span>
+              <span class="skill-tag fw">FastAPI</span>
+              <span class="skill-tag fw">Flask</span>
+              <span class="skill-tag fw">React</span>
+              <span class="skill-tag fw">Node.js</span>
+              <span class="skill-tag fw">XGBoost</span>
+              <span class="skill-tag fw">SHAP</span>
+              <span class="skill-tag fw">OpenCV</span>
+            </div>
+          </div>
+
+          <div class="skill-group">
+            <div class="skill-group__header">
+              <i class="fas fa-server skill-group-icon devops"></i>
+              <span class="skill-group__title">DevOps &amp; Deployment</span>
+            </div>
+            <div class="skill-tags">
+              <span class="skill-tag devops">Docker</span>
+              <span class="skill-tag devops">Kubernetes</span>
+              <span class="skill-tag devops">Jenkins</span>
+              <span class="skill-tag devops">GitHub Actions</span>
+              <span class="skill-tag devops">Terraform</span>
+              <span class="skill-tag devops">MLOps</span>
+              <span class="skill-tag devops">Linux</span>
+              <span class="skill-tag devops">CI/CD</span>
+            </div>
+          </div>
+
+          <div class="skill-group">
+            <div class="skill-group__header">
+              <i class="fas fa-database skill-group-icon cloud"></i>
+              <span class="skill-group__title">Cloud &amp; Data</span>
+            </div>
+            <div class="skill-tags">
+              <span class="skill-tag cloud">AWS EC2</span>
+              <span class="skill-tag cloud">AWS S3</span>
+              <span class="skill-tag cloud">PostgreSQL</span>
+              <span class="skill-tag cloud">MongoDB</span>
+              <span class="skill-tag cloud">Supabase</span>
+              <span class="skill-tag cloud">ETL Pipelines</span>
+              <span class="skill-tag cloud">gRPC</span>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ===== EXPERIENCE SECTION ===== -->
+      <section class="section" id="experience">
+        <div class="section-header">
+          <span class="code-comment">// experience.ts — Work History</span>
+        </div>
+        <h2 class="section-title">Experience</h2>
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <div class="timeline-header">
+                <div>
+                  <h3 class="timeline-role">PR &amp; Outreach Sub-Lead</h3>
+                  <div class="timeline-company">
+                    <i class="fas fa-building"></i>
+                    BetaLab Technical Club, IIIT Kottayam
+                  </div>
+                  <div class="timeline-tags-inline">
+                    <span class="tech-badge">Public Relations</span>
+                    <span class="tech-badge">Event Management</span>
+                    <span class="tech-badge">Community Building</span>
+                    <span class="tech-badge">AI/ML Events</span>
+                  </div>
+                </div>
+                <div class="timeline-date">
+                  <i class="fas fa-calendar-alt"></i>
+                  IIIT Kottayam
+                </div>
+              </div>
+              <ul class="timeline-bullets">
+                <li>
+                  <span class="bullet-arrow">▸</span>
+                  Led public relations and outreach initiatives by planning <strong>promotional campaigns</strong>
+                  for workshops and technical events, increasing <strong>student engagement</strong> across campus.
+                </li>
+                <li>
+                  <span class="bullet-arrow">▸</span>
+                  Collaborated with faculty, student organizations, and industry professionals to coordinate
+                  <strong>partnerships</strong>, speaker sessions, and community-driven technical initiatives.
+                </li>
+                <li>
+                  <span class="bullet-arrow">▸</span>
+                  Managed event publicity, <strong>social media communication</strong>, and volunteer coordination
+                  to ensure successful execution of AI/ML, software development, and coding events.
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== PROJECTS SECTION ===== -->
+      <section class="section" id="projects">
+        <div class="section-header">
+          <span class="code-comment"># projects.py — Featured Work</span>
+        </div>
+        <h2 class="section-title">Projects</h2>
+        <div class="projects-grid">
+
+          <div class="project-card featured">
+            <div class="project-card__top">
+              <div class="project-card__icon">
+                <i class="fas fa-smile"></i>
+              </div>
+              <div class="project-card__links">
+                <a href="https://github.com/mjayasaikumarreddy/Facial-Emotion-Recognition" target="_blank" rel="noopener" aria-label="GitHub">
+                  <i class="fab fa-github"></i>
+                </a>
+              </div>
+            </div>
+            <div class="project-featured-badge">Featured</div>
+            <h3 class="project-card__title">Facial Emotion Recognition</h3>
+            <p class="project-card__desc">
+              Deep learning system for real-time facial emotion recognition using CNN, classifying 
+              7 core emotions from FER-2013 dataset. Achieved <strong>90% validation accuracy</strong> 
+              over 50 epochs with ModelCheckpoint. Integrated OpenCV for real-time detection.
+            </p>
+            <div class="project-card__stats">
+              <span class="project-stat"><i class="fas fa-bullseye"></i> 90% Accuracy</span>
+              <span class="project-stat"><i class="fas fa-tag"></i> 7 Emotions</span>
+            </div>
+            <div class="project-card__tags">
+              <span class="tag">Python</span>
+              <span class="tag">TensorFlow</span>
+              <span class="tag">CNN</span>
+              <span class="tag">OpenCV</span>
+              <span class="tag">FER-2013</span>
+            </div>
+            <div class="project-card__date">
+              <i class="fas fa-calendar-alt"></i> May 2026
+            </div>
+          </div>
+
+          <div class="project-card">
+            <div class="project-card__top">
+              <div class="project-card__icon">
+                <i class="fas fa-chart-line"></i>
+              </div>
+              <div class="project-card__links">
+                <a href="https://github.com/mjayasaikumarreddy/Credit-Risk-Prediction" target="_blank" rel="noopener" aria-label="GitHub">
+                  <i class="fab fa-github"></i>
+                </a>
+              </div>
+            </div>
+            <h3 class="project-card__title">Credit Risk Prediction (XAI)</h3>
+            <p class="project-card__desc">
+              End-to-end credit risk model using XGBoost with full XAI pipeline via SHAP. 
+              Evaluated using ROC-AUC, Precision-Recall AUC, and confusion matrices. 
+              Includes fairness analysis on gender-based prediction consistency.
+            </p>
+            <div class="project-card__stats">
+              <span class="project-stat"><i class="fas fa-eye"></i> Explainable AI</span>
+              <span class="project-stat"><i class="fas fa-balance-scale"></i> Fairness Analysis</span>
+            </div>
+            <div class="project-card__tags">
+              <span class="tag">Python</span>
+              <span class="tag">XGBoost</span>
+              <span class="tag">SHAP</span>
+              <span class="tag">Scikit-learn</span>
+              <span class="tag">Pandas</span>
+            </div>
+            <div class="project-card__date">
+              <i class="fas fa-calendar-alt"></i> Jan 2026
+            </div>
+          </div>
+
+          <div class="project-card">
+            <div class="project-card__top">
+              <div class="project-card__icon">
+                <i class="fas fa-brain"></i>
+              </div>
+              <div class="project-card__links">
+                <a href="https://github.com/mjayasaikumarreddy/EEG-Digit-Classifier-with-Deep-Learning" target="_blank" rel="noopener" aria-label="GitHub">
+                  <i class="fab fa-github"></i>
+                </a>
+              </div>
+            </div>
+            <h3 class="project-card__title">EEG Digit Classifier</h3>
+            <p class="project-card__desc">
+              EEG-based digit classification using CNN-LSTM architectures. Processes EDF brain-signal 
+              recordings with filtering, normalization, augmentation, and windowing. Suitable for 
+              brain-computer interface and neurotechnology research.
+            </p>
+            <div class="project-card__stats">
+              <span class="project-stat"><i class="fas fa-wave-square"></i> BCI Research</span>
+              <span class="project-stat"><i class="fas fa-network-wired"></i> CNN-LSTM</span>
+            </div>
+            <div class="project-card__tags">
+              <span class="tag">Python</span>
+              <span class="tag">TensorFlow</span>
+              <span class="tag">Keras</span>
+              <span class="tag">MNE</span>
+              <span class="tag">EEG</span>
+            </div>
+            <div class="project-card__date">
+              <i class="fas fa-calendar-alt"></i> Nov 2025
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ===== CONTACT SECTION ===== -->
+      <section class="section" id="contact">
+        <div class="section-header">
+          <span class="code-comment">// contact.go — Let's Connect</span>
+        </div>
+        <h2 class="section-title">Get In Touch</h2>
+        <div class="contact-grid">
+          <div class="contact-info">
+            <p class="contact-intro">
+              I'm always open to discussing research collaborations, internships, 
+              or interesting AI/ML projects. Feel free to reach out!
+            </p>
+            <div class="contact-links">
+              <a href="mailto:m.jayasaikumarreddy@gmail.com" class="contact-link">
+                <div class="contact-link__icon">
+                  <i class="fas fa-envelope"></i>
+                </div>
+                <div class="contact-link__text">
+                  <span class="contact-link__label">Email</span>
+                  <span class="contact-link__value">m.jayasaikumarreddy@gmail.com</span>
+                </div>
+                <i class="fas fa-arrow-right contact-link__arrow"></i>
+              </a>
+              <a href="https://github.com/mjayasaikumarreddy" target="_blank" rel="noopener" class="contact-link">
+                <div class="contact-link__icon github">
+                  <i class="fab fa-github"></i>
+                </div>
+                <div class="contact-link__text">
+                  <span class="contact-link__label">GitHub</span>
+                  <span class="contact-link__value">mjayasaikumarreddy</span>
+                </div>
+                <i class="fas fa-arrow-right contact-link__arrow"></i>
+              </a>
+              <a href="https://linkedin.com" target="_blank" rel="noopener" class="contact-link">
+                <div class="contact-link__icon linkedin">
+                  <i class="fab fa-linkedin"></i>
+                </div>
+                <div class="contact-link__text">
+                  <span class="contact-link__label">LinkedIn</span>
+                  <span class="contact-link__value">Connect with me</span>
+                </div>
+                <i class="fas fa-arrow-right contact-link__arrow"></i>
+              </a>
+              <a href="tel:+918333066657" class="contact-link">
+                <div class="contact-link__icon phone">
+                  <i class="fas fa-phone"></i>
+                </div>
+                <div class="contact-link__text">
+                  <span class="contact-link__label">Phone</span>
+                  <span class="contact-link__value">+91 8333066657</span>
+                </div>
+                <i class="fas fa-arrow-right contact-link__arrow"></i>
+              </a>
+            </div>
+          </div>
+          <form class="contact-form" id="contact-form" onsubmit="handleFormSubmit(event)">
+            <div class="form-group">
+              <label for="name" class="form-label">
+                <span class="code-keyword">const</span> name =
+              </label>
+              <input type="text" id="name" name="name" class="form-input" placeholder="Your name" required />
+            </div>
+            <div class="form-group">
+              <label for="email" class="form-label">
+                <span class="code-keyword">const</span> email =
+              </label>
+              <input type="email" id="email" name="email" class="form-input" placeholder="your@email.com" required />
+            </div>
+            <div class="form-group">
+              <label for="message" class="form-label">
+                <span class="code-keyword">const</span> message =
+              </label>
+              <textarea id="message" name="message" class="form-textarea" placeholder="Hey Jaya, I'd love to collaborate on..." rows="5" required></textarea>
+            </div>
+            <button type="submit" class="btn btn--primary form-submit">
+              <i class="fas fa-paper-plane"></i> Send Message
+            </button>
+            <div class="form-success" id="form-success">
+              <i class="fas fa-check-circle"></i> Message sent! I'll get back to you soon.
+            </div>
+          </form>
+        </div>
+      </section>
+
+    </main><!-- end editor-content -->
+  </div><!-- end editor-layout -->
+
+  <!-- Status bar -->
+  <footer class="status-bar" role="contentinfo">
+    <div class="status-bar__left">
+      <span class="status-item"><i class="fas fa-code-branch"></i> main</span>
+      <span class="status-item"><i class="fas fa-check-circle"></i> Portfolio</span>
+    </div>
+    <div class="status-bar__right">
+      <span class="status-item">Python · AI/ML · PR &amp; Outreach Sub-Lead @ BetaLab</span>
+      <span class="status-item"><i class="fas fa-wifi"></i> IIIT Kottayam</span>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
